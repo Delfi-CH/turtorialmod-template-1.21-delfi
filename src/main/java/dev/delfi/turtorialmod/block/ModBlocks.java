@@ -18,6 +18,10 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
+    public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Turtorialmod.MOD_ID, name), block);
@@ -32,8 +36,9 @@ public class ModBlocks {
     public static void registerModBlocks() {
         Turtorialmod.LOGGER.info("Registering Mod Blocks for" + Turtorialmod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries ->
-                entries.add(ModBlocks.PINK_GARNET_BLOCK)
-        );
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+            entries.add(ModBlocks.PINK_GARNET_BLOCK);
+            entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
+        });
     }
 }
