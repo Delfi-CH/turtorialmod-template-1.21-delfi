@@ -1,6 +1,7 @@
 package dev.delfi.turtorialmod;
 
 import dev.delfi.turtorialmod.block.ModBlocks;
+import dev.delfi.turtorialmod.item.ModItemGroups;
 import dev.delfi.turtorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -12,6 +13,8 @@ public class Turtorialmod implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	@Override
 	public void onInitialize() {
+
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 	}
