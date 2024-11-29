@@ -1,5 +1,6 @@
 package dev.delfi.turtorialmod;
 
+import dev.delfi.turtorialmod.block.ModBlocks;
 import dev.delfi.turtorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -12,5 +13,6 @@ public class Turtorialmod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }

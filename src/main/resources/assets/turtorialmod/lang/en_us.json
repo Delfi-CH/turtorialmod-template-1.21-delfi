@@ -1,4 +1,6 @@
 {
   "item.turtorialmod.pink_garnet": "Pink Garnet",
-  "item.turtorialmod.raw_pink_garnet": "Raw Pink Garnet"
+  "item.turtorialmod.raw_pink_garnet": "Raw Pink Garnet",
+
+  "block.tutorialmod.pink_garnet_block": "Block of Pink Garnet"
 }
